@@ -1,0 +1,17 @@
+@use "mediaQuery" as *;
+.header-hero {
+  background-color: #eef1f6;
+}
+.container {
+  width: 80%;
+  margin: auto;
+  @include breakpoints(mobile) {
+    width: 90%;
+    // padding: 2rem;
+    margin: auto;
+  }
+  @include breakpoints(tablet) {
+    width: 90%;
+    margin: auto;
+  }
+}

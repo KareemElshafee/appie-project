@@ -1,0 +1,98 @@
+@use "mediaQuery" as *;
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  margin-bottom: 10rem;
+  @include breakpoints(mobile) {
+    margin-bottom: 7rem;
+    padding: 2rem 0;
+  }
+  & > div {
+    display: flex;
+    align-items: center;
+    .logo {
+      margin-right: 5rem;
+      @include breakpoints(tablet) {
+        margin-right: 3rem;
+      }
+    }
+  }
+  & .btn button {
+    @include breakpoints(mobile) {
+      padding: 0.5rem 1rem;
+      font-size: 1.2rem;
+      margin-right: 1rem;
+    }
+    @include breakpoints(tablet) {
+      padding: 0.5rem 1.2rem;
+      font-size: 1.4rem;
+    }
+    background-color: #ff3e66;
+    padding: 1rem 3rem;
+    color: white;
+    font-size: 1.6rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    &:hover {
+      background-color: #ff6585;
+    }
+  }
+  .mobile-menu {
+    display: none;
+    @include breakpoints(mobile) {
+      display: block;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+  }
+}
+nav {
+  @include breakpoints(mobile) {
+    display: none;
+    background-color: white;
+    position: absolute;
+    top: 8rem;
+    left: 50%;
+    width: 70%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    border-radius: 1rem;
+    padding: 2rem;
+    ul {
+      flex-direction: column;
+      margin-bottom: 2rem;
+      justify-content: center;
+      align-items: center;
+      li {
+        padding: 0.5rem;
+        &:hover {
+          border-bottom: 2px solid #333;
+        }
+      }
+    }
+  }
+}
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  li {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    border: 2px solid transparent;
+    a {
+      text-decoration: none;
+      color: #5d585e;
+    }
+    i {
+      cursor: pointer;
+      margin-left: 0.5rem;
+      font-size: 1rem;
+    }
+  }
+}

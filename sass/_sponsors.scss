@@ -1,0 +1,57 @@
+@use "mediaQuery" as *;
+.sponsors {
+  margin-bottom: 7rem;
+  .container {
+    padding: 10rem;
+    @include breakpoints(mobile) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    @include breakpoints(tablet) {
+      padding: 5rem;
+    }
+    h2 {
+      font-size: 4.4rem;
+      width: 50rem;
+      color: #0e1133;
+      text-align: center;
+      margin: auto;
+      margin-bottom: 2rem;
+      @include breakpoints(mobile) {
+        width: 100%;
+        font-size: 3rem;
+      }
+    }
+    p {
+      font-size: 1.9rem;
+      text-align: center;
+      color: #0e1133;
+      margin-bottom: 3rem;
+    }
+    .sponsors-imgs {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 2rem;
+      // display: grid;
+      // grid-template-columns: repeat(6, 1fr);
+      // grid-template-rows: repeat(2, 1fr);
+      // gap: 3rem;
+      @include breakpoints(mobile) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+      }
+      .sponsor-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        box-shadow: 10px 10px 15px rgba($color: #000000, $alpha: 0.1),
+          -10px 0 15px rgba($color: #000000, $alpha: 0.1);
+        padding: 3rem;
+      }
+    }
+  }
+}

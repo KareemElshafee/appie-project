@@ -1,0 +1,112 @@
+@use "mediaQuery" as *;
+.marketing {
+  margin-bottom: 10rem;
+  .container {
+    background-color: #f0f1f7;
+    padding: 7rem;
+    display: flex;
+    gap: 3rem;
+    overflow: hidden;
+    @include breakpoints(mobile) {
+      padding: 2rem;
+    }
+    @include breakpoints(tablet) {
+      padding: 2rem;
+      gap: 2rem;
+    }
+    .img {
+      width: 80%;
+      @include breakpoints(mobile) {
+        display: none;
+      }
+      img {
+        width: 100%;
+        margin-bottom: -27.6rem;
+      }
+    }
+    .text {
+      margin-top: 8rem;
+      @include breakpoints(mobile) {
+        margin-top: 0;
+      }
+      h4 {
+        color: #fd718e;
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+        @include breakpoints(mobile) {
+          text-align: center;
+          font-size: 1.8rem;
+          text-align: center;
+        }
+      }
+      h1 {
+        font-size: 4.5rem;
+        color: #0f1234;
+        margin-bottom: 1rem;
+        @include breakpoints(mobile) {
+          font-size: 2.6rem;
+          text-align: center;
+        }
+        @include breakpoints(tablet) {
+          font-size: 2.8rem;
+        }
+      }
+      .brand {
+        font-size: 1.6rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+        @include breakpoints(mobile) {
+          font-size: 1.4rem;
+          text-align: center;
+        }
+      }
+      .flex {
+        display: flex;
+        @include breakpoints(mobile) {
+          flex-direction: column;
+        }
+      }
+      .check-container {
+        display: flex;
+        gap: 2rem;
+        @include breakpoints(mobile) {
+          margin-bottom: 1.5rem;
+        }
+        &:not(:last-child) {
+          margin-right: 2rem;
+        }
+        .check-mark {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 2.5rem;
+          height: 2.5rem;
+          border-radius: 50%;
+          background-color: #32c36a;
+          padding: 2px;
+          @include breakpoints(tablet) {
+            width: 2.2rem;
+            height: 2.2rem;
+            padding: 4px;
+          }
+          i {
+            color: white;
+            font-size: 1.6rem;
+          }
+        }
+        .text-check {
+          h3 {
+            font-size: 1.8rem;
+            color: #0f1234;
+            margin-bottom: 1rem;
+          }
+          p {
+            font-size: 1.4rem;
+            color: #666;
+          }
+        }
+      }
+    }
+  }
+}

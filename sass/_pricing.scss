@@ -1,0 +1,186 @@
+@use "mediaQuery" as *;
+.pricing {
+  margin-bottom: 10rem;
+  .container {
+    .global-heading,
+    .global-para {
+      text-align: center;
+    }
+    .switch-box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 3rem;
+      .switch {
+        display: inline-block;
+        position: relative;
+        width: 200px;
+        height: 40px;
+        input {
+          opacity: 0;
+          height: 0;
+          width: 0;
+        }
+        .slider {
+          position: absolute;
+          cursor: pointer;
+          border: 1px solid #666;
+          border-radius: 4rem;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: #fff;
+          transition: all 0.4s;
+          .monthly,
+          .yearly {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-60%);
+            color: #0e1133;
+            font-size: 1.4rem;
+            font-weight: 500;
+            transition: all 0.4s;
+          }
+          .monthly {
+            left: 30px;
+            color: white;
+          }
+          .yearly {
+            right: 30px;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 30px;
+            left: 5px;
+            bottom: 5px;
+            background-color: #ff3e66;
+            transition: 0.3s;
+            border-radius: 4rem;
+          }
+        }
+        input:checked + .slider .monthly {
+          color: #0e1133;
+        }
+        input:checked + .slider .yearly {
+          color: white;
+        }
+        input:checked + .slider:before {
+          transform: translateX(90px);
+        }
+      }
+    }
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+      justify-content: center;
+      align-content: center;
+      // display: flex;
+      // align-items: center;
+      // gap: 3.33%;
+      // @include breakpoints(mobile) {
+      //   flex-direction: column;
+      // }
+      .plan {
+        // width: 33%;
+        padding: 3rem;
+        border: 1px solid #ccc;
+        border-radius: 1rem;
+        @include breakpoints(mobile) {
+          width: 100%;
+          margin-bottom: 3rem;
+        }
+        h6 {
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          color: #0e1133;
+        }
+        .price {
+          position: relative;
+          margin-bottom: 1rem;
+          .dollar-sign {
+            position: absolute;
+            top: 5px;
+            font-size: 2rem;
+            color: #0e1133;
+          }
+          strong {
+            margin-left: 1.5rem;
+            font-size: 4.5rem;
+            color: #0e1133;
+          }
+          .period {
+            font-size: 1.4rem;
+            color: #666;
+          }
+        }
+        .offer {
+          color: #595b70;
+          padding-bottom: 2rem;
+          border-bottom: 1px solid #ccc;
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
+        .props {
+          margin-bottom: 3rem;
+          p {
+            position: relative;
+            color: #595b70;
+            margin-bottom: 2rem;
+            font-size: 1.5rem;
+            margin-left: 2rem;
+            &::before {
+              position: absolute;
+              font-family: "Font Awesome 6 Free";
+              font-weight: 900;
+              content: "\f00c";
+              background-color: #eef4fe;
+              color: #5b8ff7;
+              top: -2px;
+              left: -2.7rem;
+              padding: 4px;
+              border-radius: 50%;
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          display: inline-block;
+          color: #0e1133;
+          border-radius: 2rem;
+          font-size: 1.6rem;
+          padding: 1rem 2rem;
+          border: 1px solid #3a3c53;
+          margin-bottom: 2rem;
+        }
+      }
+      .selected {
+        border-top: 3px solid #ff3e66;
+        overflow: hidden;
+        position: relative;
+        box-shadow: 10px 10px 15px rgba($color: #000000, $alpha: 0.1),
+          -10px 10px 15px rgba($color: #000000, $alpha: 0.1),
+          10px 10px 15px rgba($color: #000000, $alpha: 0.1);
+        &::before {
+          position: absolute;
+          content: "Most Popular";
+          color: white;
+          background-color: #2a6df5;
+          padding: 5px 2rem 5px 1.5rem;
+          border-radius: 2rem;
+          font-size: 1.6rem;
+          top: 2rem;
+          right: -1rem;
+        }
+        a {
+          background-color: #ff3e66;
+          color: white;
+          border: none;
+        }
+      }
+    }
+  }
+}

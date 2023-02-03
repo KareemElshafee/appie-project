@@ -1,0 +1,101 @@
+@use "mediaQuery" as *;
+.discover {
+  background-color: #0e1133;
+  margin-bottom: 10rem;
+  .container {
+    padding: 7rem;
+    @include breakpoints(mobile) {
+      padding: 5rem 2rem;
+    }
+    @include breakpoints(tablet) {
+      padding: 5rem 2rem;
+    }
+    h2 {
+      text-align: center;
+      font-size: 3rem;
+      color: white;
+      width: 27rem;
+      margin: auto;
+    }
+    h2 + p {
+      text-align: center;
+      color: #ddd;
+      font-size: 1.5rem;
+      margin: 2rem;
+      margin-bottom: 6rem;
+    }
+    .flex {
+      display: flex;
+      align-items: center;
+      @include breakpoints(mobile) {
+        flex-direction: column;
+      }
+      gap: 5rem;
+      .left-side {
+        width: 50%;
+        @include breakpoints(mobile) {
+          width: 100%;
+        }
+        & > div {
+          border: 1px solid #333;
+          padding: 3rem;
+          border-radius: 6px;
+          margin-bottom: 3rem;
+          width: fit-content;
+          @include breakpoints(tablet) {
+            padding: 2rem;
+          }
+          h3,
+          p {
+            margin-left: 3rem;
+          }
+        }
+        h3 {
+          position: relative;
+          color: white;
+          font-size: 2rem;
+          margin-bottom: 1rem;
+          @include breakpoints(tablet) {
+            font-size: 1.8rem;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            width: 1.5rem;
+            height: 1.5rem;
+            // margin-right: 3rem;
+            top: 0rem;
+            left: -3.5rem;
+            background-color: red;
+            border-radius: 50%;
+          }
+        }
+        .pink::before {
+          background-color: #ff3e66;
+          border: 3px solid #6c243f;
+        }
+        .blue::before {
+          background-color: #2eacfc;
+          border: 3px solid #15233d;
+        }
+        .green::before {
+          background-color: #33c956;
+          border: 3px solid #1e5839;
+        }
+        p {
+          color: #aaa;
+          font-size: 1.3rem;
+        }
+      }
+      .right-side {
+        width: 50%;
+        @include breakpoints(mobile) {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

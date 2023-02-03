@@ -1,0 +1,95 @@
+@use "mediaQuery" as *;
+.testimonial {
+  margin-bottom: 10rem;
+  .container {
+    position: relative;
+    padding: 15rem;
+    background-color: #2b6ff4;
+    @include breakpoints(mobile) {
+      padding: 5rem 2rem;
+    }
+    @include breakpoints(tablet) {
+      padding: 3rem;
+    }
+    .flex {
+      display: flex;
+      gap: 5rem;
+      @include breakpoints(mobile) {
+        flex-direction: column;
+      }
+      .img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          border-radius: 50%;
+          margin-bottom: 2rem;
+        }
+        .stars {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-bottom: 1rem;
+          i {
+            color: #ffb848;
+            font-size: 1.2rem;
+          }
+        }
+        span {
+          font-size: 1.3rem;
+          color: white;
+        }
+      }
+      .text {
+        .testimonial-text {
+          color: white;
+          font-size: 2rem;
+          margin-bottom: 3rem;
+          line-height: 1.6;
+        }
+        .name {
+          font-size: 2.2rem;
+          font-weight: 700;
+          margin-bottom: 1.3rem;
+          color: white;
+          @include breakpoints(mobile) {
+            text-align: center;
+          }
+        }
+        .job {
+          color: white;
+          font-size: 1.2rem;
+          @include breakpoints(mobile) {
+            text-align: center;
+          }
+        }
+      }
+    }
+    .arrows {
+      position: absolute;
+      bottom: 15rem;
+      right: 15rem;
+      @include breakpoints(mobile) {
+        display: none;
+      }
+      @include breakpoints(tablet) {
+        bottom: 5rem;
+        right: 5rem;
+      }
+      .left,
+      .right {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: white;
+        border: 1px solid white;
+        padding: 1rem;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+      .right {
+        margin-left: 1rem;
+      }
+    }
+  }
+}

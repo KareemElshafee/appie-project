@@ -1,0 +1,154 @@
+@use "mediaQuery" as *;
+$blue: #0e1133;
+
+.hero-section {
+  display: flex;
+  margin-bottom: 5rem;
+  gap: 2rem;
+  padding-bottom: 20rem;
+  @include breakpoints(mobile) {
+    flex-direction: column;
+    padding-bottom: 15rem;
+  }
+  @include breakpoints(tablet) {
+    padding-bottom: 11rem;
+  }
+  & .left-side {
+    width: 40%;
+    @include breakpoints(mobile) {
+      width: 100%;
+    }
+    @include breakpoints(tablet) {
+      width: 50%;
+    }
+    h1 {
+      font-size: 5.4rem;
+      color: $blue;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      @include breakpoints(mobile) {
+        font-size: 2.7rem;
+      }
+      @include breakpoints(tablet) {
+        font-size: 2.8rem;
+      }
+    }
+    .prime {
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+      color: $blue;
+    }
+    .input {
+      display: flex;
+      align-items: center;
+      position: relative;
+      display: block;
+      margin-bottom: 3rem;
+      @include breakpoints(mobile) {
+        width: 100%;
+      }
+    }
+    input {
+      width: 100%;
+      padding: 2rem;
+      padding-left: 4rem;
+      width: 80%;
+      border: none;
+      border-radius: 3rem;
+      border-left: 0.5rem solid #ff3e66;
+      outline: none;
+      font-size: 1.6rem;
+      @include breakpoints(mobile) {
+        width: 100%;
+      }
+      @include breakpoints(tablet) {
+        width: 100%;
+      }
+      color: $blue;
+      &::placeholder {
+        margin-left: 5rem;
+        color: #bbb;
+      }
+    }
+    .fa-envelope,
+    .fa-arrow-right {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-right: 2rem;
+      font-size: 1.5rem;
+    }
+    .fa-envelope {
+      left: 2rem;
+      color: #ccc;
+    }
+    .fa-arrow-right {
+      right: 7rem;
+      color: #ff3e66;
+      cursor: pointer;
+      @include breakpoints(mobile) {
+        right: 0rem;
+      }
+      @include breakpoints(tablet) {
+        right: 0;
+      }
+    }
+    .feedback {
+      display: flex;
+      align-items: center;
+      .imgs {
+        img {
+          width: 5rem;
+          height: 5rem;
+          object-fit: cover;
+          border-radius: 50%;
+          border: 2px solid white;
+          &:not(:first-child) {
+            margin-left: -2rem;
+          }
+          &:last-child {
+            margin-right: 2rem;
+          }
+        }
+      }
+    }
+    .text {
+      font-size: 1.6rem;
+      strong {
+        color: $blue;
+        font-size: 2.6rem;
+      }
+      & p:last-child {
+        color: #4d5ae2;
+      }
+    }
+  }
+  & .right-side {
+    width: 60%;
+    position: relative;
+    @include breakpoints(mobile) {
+      width: 100%;
+    }
+    @include breakpoints(tablet) {
+      width: 50%;
+    }
+    img {
+      width: 120%;
+      position: absolute;
+      right: -20%;
+      bottom: 0;
+      top: 0;
+      @include breakpoints(mobile) {
+        bottom: -5rem;
+        right: -2rem;
+        width: 60%;
+      }
+      @include breakpoints(tablet) {
+        bottom: -15rem;
+        right: -5rem;
+        width: 90%;
+        top: 15rem;
+      }
+    }
+  }
+}

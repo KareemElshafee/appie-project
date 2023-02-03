@@ -1,0 +1,192 @@
+@use "mediaQuery" as *;
+$main: #0e1133;
+$alt: #50505b;
+$btn: #f3b8c8;
+$icon-touch: #83c8f7;
+footer {
+  position: relative;
+  background-color: #eef1f6;
+  .container {
+    padding: 5rem 0;
+    h5 {
+      font-size: 2.2rem;
+      color: $main;
+      font-weight: 700;
+      margin-bottom: 2rem;
+    }
+    .links-contacts {
+      margin-bottom: 10rem;
+      @include breakpoints(mobile) {
+        margin-bottom: 0;
+        padding-bottom: 8rem;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 3rem;
+      }
+      @include breakpoints(tablet) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 3rem;
+        margin-bottom: 3rem;
+      }
+      & > div {
+        width: 33%;
+        @include breakpoints(mobile) {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+        @include breakpoints(tablet) {
+          width: 100%;
+        }
+      }
+      display: flex;
+      justify-content: space-between;
+      gap: 5rem;
+      @include breakpoints(mobile) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .social {
+      .logo {
+        margin-bottom: 2rem;
+      }
+      p {
+        font-size: 1.6rem;
+        color: $alt;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+      a {
+        text-decoration: none;
+        display: block;
+        font-size: 1.5rem;
+        color: $main;
+        margin-bottom: 3rem;
+        i {
+          margin-left: 5px;
+        }
+      }
+      .social-icons {
+        display: flex;
+        align-items: center;
+        div {
+          padding: 1rem;
+          cursor: pointer;
+          background-color: white;
+          border-radius: 9px;
+          margin-right: 1rem;
+          transition: all 0.4s;
+          i {
+            font-size: 1.6rem;
+            color: $main;
+          }
+          &:hover {
+            background-color: $main;
+            i {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .links {
+      display: flex;
+      justify-content: space-between;
+      @include breakpoints(mobile) {
+        flex-direction: column;
+      }
+      a {
+        display: block;
+        color: $alt;
+        margin-bottom: 1.5rem;
+        text-decoration: none;
+        font-size: 1.6rem;
+      }
+    }
+    .contact {
+      div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+        i {
+          color: $icon-touch;
+          font-size: 1.4rem;
+          margin-right: 1.3rem;
+        }
+        p {
+          color: $alt;
+          font-size: 1.8rem;
+        }
+      }
+    }
+    .copyright-store {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.8rem;
+      color: $alt;
+      @include breakpoints(mobile) {
+        flex-direction: column;
+        font-size: 1.5rem;
+      }
+      @include breakpoints(tablet) {
+        flex-direction: column;
+      }
+      .footer-app-store {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        font-size: 1.3rem;
+        .ios {
+          background-color: white;
+        }
+        .android {
+          border: 1px solid #ccc;
+        }
+        div {
+          display: flex;
+          align-items: center;
+          padding: 1rem;
+          border-radius: 9px;
+          cursor: pointer;
+          @include breakpoints(mobile) {
+            margin-bottom: 1.5rem;
+          }
+          @include breakpoints(tablet) {
+            margin-bottom: 2rem;
+          }
+          i {
+            color: $main;
+            margin-right: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  .btn-up {
+    position: absolute;
+    bottom: 4rem;
+    right: 4rem;
+    cursor: pointer;
+    background-color: $btn;
+    padding: 1.5rem;
+    border-radius: 8px;
+    @include breakpoints(mobile) {
+      bottom: 1rem;
+      right: 1rem;
+      padding: 1rem;
+    }
+    @include breakpoints(tablet) {
+      right: 2rem;
+      bottom: 2rem;
+    }
+    i {
+      color: white;
+    }
+  }
+}

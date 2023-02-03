@@ -1,0 +1,144 @@
+@use "mediaQuery" as *;
+.user-number {
+  margin-bottom: 10rem;
+  .container {
+    .cards {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 5rem;
+      margin-bottom: 5rem;
+      @include breakpoints(mobile) {
+        flex-direction: column;
+        padding: 1rem;
+      }
+      @include breakpoints(tablet) {
+        padding: 3rem;
+        gap: 1rem;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        border-radius: 1rem;
+        box-shadow: 0px 10px 25px rgba($color: #000000, $alpha: 0.15),
+          -10px 10px 25px rgba($color: #000000, $alpha: 0.15);
+        @include breakpoints(mobile) {
+          width: 100%;
+          margin-bottom: 2rem;
+        }
+        @include breakpoints(tablet) {
+          padding: 2rem;
+        }
+        p {
+          font-size: 3.4rem;
+          color: #0e1133;
+          @include breakpoints(tablet) {
+            font-size: 3rem;
+          }
+        }
+        span {
+          font-size: 1.4rem;
+          color: #181b36;
+          @include breakpoints(tablet) {
+            font-size: 1.2rem;
+            font-weight: 500;
+          }
+        }
+        img {
+          width: 5rem;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+    .video {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      .thumb {
+        width: 65%;
+        @include breakpoints(mobile) {
+          width: 100%;
+        }
+      }
+      .slide {
+        width: 32%;
+        @include breakpoints(mobile) {
+          display: none;
+        }
+      }
+    }
+    .slide-mobile {
+      display: none;
+      @include breakpoints(mobile) {
+        display: block;
+        width: 100%;
+        margin-top: 4rem;
+        img {
+          width: 100%;
+        }
+      }
+    }
+    .action {
+      margin-left: 6rem;
+      position: relative;
+      @include breakpoints(mobile) {
+        margin-left: 0;
+      }
+      h3 {
+        font-size: 2.5rem;
+        color: #0e1133;
+        margin-bottom: 1rem;
+        @include breakpoints(mobile) {
+          font-size: 2rem;
+        }
+      }
+      p {
+        font-size: 1.8rem;
+        color: #323557;
+        margin-bottom: 4rem;
+        width: 70rem;
+        line-height: 1.6;
+        @include breakpoints(mobile) {
+          width: 100%;
+        }
+        @include breakpoints(tablet) {
+          width: fit-content;
+        }
+      }
+      a {
+        font-size: 1.6rem;
+        border: 1px solid #666;
+        border-radius: 2rem;
+        padding: 1rem 2rem;
+        text-decoration: none;
+        font-weight: 500;
+        color: #0e1133;
+      }
+      .arrows {
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+        @include breakpoints(mobile) {
+          display: none;
+        }
+        @include breakpoints(tablet) {
+          top: 0;
+        }
+        span {
+          border: 1px solid #666;
+          border-radius: 50%;
+          padding: 0.7rem;
+          font-size: 1.8rem;
+          font-weight: 700;
+          margin-left: 1rem;
+          color: #333;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

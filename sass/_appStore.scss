@@ -1,0 +1,82 @@
+@use "mediaQuery" as *;
+.app-store {
+  background-color: #eef1f6;
+  padding: 7rem;
+  margin-bottom: 10rem;
+  @include breakpoints(mobile) {
+    padding: 10rem 3rem;
+  }
+  @include breakpoints(tablet) {
+    padding: 5rem 3rem;
+  }
+  .container {
+    width: 35%;
+    margin: 0;
+    @include breakpoints(mobile) {
+      width: 100%;
+    }
+    @include breakpoints(tablet) {
+      width: 60%;
+    }
+    h5 {
+      font-size: 1.4rem;
+      color: #ff4c66;
+      margin-bottom: 1.5rem;
+    }
+    h2 {
+      font-size: 4.5rem;
+      color: #0e1122;
+      margin-bottom: 1.5rem;
+      @include breakpoints(mobile) {
+        font-size: 3.2rem;
+      }
+      @include breakpoints(tablet) {
+        font-size: 3.5rem;
+      }
+    }
+    p {
+      font-size: 1.5rem;
+      color: #282b3d;
+      line-height: 1.5;
+      margin-bottom: 2rem;
+    }
+    .links {
+      display: flex;
+      gap: 1.4rem;
+      a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        text-decoration: none;
+        border: 2px solid #0e1133;
+        border-radius: 1.5rem;
+        padding: 1rem 2rem;
+        font-size: 1.4rem;
+        @include breakpoints(mobile) {
+          font-size: 1.2rem;
+          padding: 0.5rem 1rem;
+        }
+        strong {
+          font-size: 2.3rem;
+          @include breakpoints(mobile) {
+            font-size: 1.8rem;
+          }
+        }
+        i {
+          font-size: 3rem;
+          @include breakpoints(mobile) {
+            font-size: 2rem;
+          }
+        }
+      }
+      .ios {
+        background-color: #0e1133;
+        color: white;
+      }
+      .android {
+        background-color: white;
+        color: #0e1133;
+      }
+    }
+  }
+}
