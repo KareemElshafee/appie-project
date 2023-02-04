@@ -7,8 +7,7 @@
     <title>appie-launch your app</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="css/all.min.css" />
-    <!-- start icon  -->
-    <!-- End icon  -->
+    <script defer src="main.js"></script>
   </head>
   <body>
     <div class="header-hero">
@@ -32,9 +31,10 @@
                 </li>
                 <li><a href="#">Contact</a></li>
               </ul>
+              <i class="fa-solid fa-xmark close-nav"></i>
             </nav>
           </div>
-          <div class="btn">
+          <div class="btn log-in">
             <button>Get Started</button>
           </div>
           <div class="mobile-menu">
@@ -509,5 +509,33 @@
       </div>
     </footer>
     <div class="overlay hidden"></div>
+    <div class="log-in-form hidden">
+      <form>
+        <h3>Sign Up</h3>
+        <div class="input-field">
+          <label for="username">Username</label>
+          <input type="text" id="username" placeholder="user name" />
+        </div>
+        <div class="input-field">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="write a strong password"
+          />
+        </div>
+        <input type="submit" value="Sign Up" />
+        <h4>already have an email <a href="#">sign in</a></h4>
+        <div class="facebook login-email">
+          <i class="fa-brands fa-square-facebook"></i>
+          <p>sign up with facebook</p>
+        </div>
+        <div class="google login-email">
+          <i class="fa-solid fa-envelope"></i>
+          <p>sign up with google</p>
+        </div>
+      </form>
+      <i class="fa-solid fa-xmark close-login-form"></i>
+    </div>
   </body>
 </html>

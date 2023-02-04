@@ -50,6 +50,18 @@ header {
   }
 }
 nav {
+  position: relative;
+  .close-nav {
+    display: none;
+    @include breakpoints(mobile) {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 1.6rem;
+      cursor: pointer;
+    }
+  }
   @include breakpoints(mobile) {
     display: none;
     background-color: white;
