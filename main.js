@@ -45,7 +45,7 @@ logInBtn.addEventListener("click", function () {
 
 submitLogInForm.addEventListener("click", function (e) {
   e.preventDefault();
-  hideOverlayAndForm();
+  logInForm.classList.add("hidden");
   Array.from(formInputField).forEach((input) => {
     input.value = "";
   });
