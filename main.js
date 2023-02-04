@@ -27,12 +27,16 @@ function hideOverlayAndForm() {
 burgerMenu.addEventListener("click", function () {
   overlay.classList.remove("hidden");
   navBav.style.display = "block";
+  overlay.addEventListener("click", function () {
+    navBav.style.display = "none";
+    hideOverlayAndForm();
+  });
 });
 
-overlay.addEventListener("click", function () {
-  navBav.style.display = "none";
-  hideOverlayAndForm();
-});
+// overlay.addEventListener("click", function () {
+//   navBav.style.display = "none";
+//   hideOverlayAndForm();
+// });
 
 closeNavBar.addEventListener("click", function () {
   overlay.classList.add("hidden");
@@ -41,11 +45,14 @@ closeNavBar.addEventListener("click", function () {
 
 logInBtn.addEventListener("click", function () {
   showOverlayAndForm();
+  overlay.addEventListener("click", function () {
+    hideOverlayAndForm();
+  });
 });
 
 submitLogInForm.addEventListener("click", function (e) {
   e.preventDefault();
-  logInForm.classList.add("hidden");
+  hideOverlayAndForm();
   Array.from(formInputField).forEach((input) => {
     input.value = "";
   });
